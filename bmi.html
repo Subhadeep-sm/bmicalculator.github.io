@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bmi.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <title>BMI</title>
+</head>
+
+<body>
+
+    <center>
+
+        <br>
+        <br>
+
+        <div class="header wow bounceInUp" data-wow-duration="1.6s">
+            BMI Calculator
+        </div>
+
+        <br>
+        <br>
+        <div class="main wow bounceInRight" data-wow-delay="100ms">
+            <div class="flexbox">
+
+                <div class="flexitems">
+                    <div class="content">
+                        Weight
+                        <select class="select" id="weight-unit">
+                            <option>Kilogams</option>
+                            <option>Pounds</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="flexitems">
+                    <div class="content">
+                        <input type="number" placeholder="weight" class="inputs" id="weight">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="flexbox">
+
+                <div class="flexitems">
+                    <div class="content">
+                        Height
+                        <select class="select" id="height-unit">
+                            <option>Centimeters</option>
+                            <option>Meters</option>
+                            <option>Feet</option>
+                            <option>Inches</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="flexitems">
+                    <div class="content">
+                        <input type="number" placeholder="height" class="inputs" id="height">
+                    </div>
+                </div>
+
+            </div>
+
+
+
+            <div class="btn-div">
+                <br>
+                <button class="btn wow bounceInLeft" data-wow-delay="250ms" data-wow-duration="1.5s" onclick="allclear();">AC</button>
+                <button class="btn wow bounceInRight" data-wow-delay="260ms" onclick="weightunit();heightunit();bmi();">Go</button>
+                <br>
+                <p id="result"></p>
+            </div>
+
+            <div class="bar-div wow bounceInDown" data-wow-delay="280ms">
+                <br>
+                <div class="bar">
+                    <div class="partitions left wow bounceInLeft" data-wow-delay="1s"></div>
+                    <div class="partitions middle wow bounceInUp" data-wow-delay="1.2s"></div>
+                    <div class="partitions right wow bounceInRight" data-wow-delay="1.25s"></div>
+                </div>
+                <br>
+                <br>
+                <br>
+            </div>
+
+            <br>
+
+        </div>
+
+        <div class="footer wow fadeInRightBig" data-wow-duration="1.5s">
+
+            <center><i>Created by</i> Subha Deep Mishra</center>
+            <hr>
+        </div>
+    </center>
+
+
+    <script src="js/bmi.js"></script>
+    <script src="js/wow.js"></script>
+    <script type="text/javascript">
+        var wow = new WOW(
+            {
+                boxClass: 'wow',      // animated element css class (default is wow)
+                animateClass: 'animated', // animation css class (default is animated)
+                offset: 0,          // distance to the element when triggering the animation (default is 0)
+                mobile: true,       // trigger animations on mobile devices (default is true)
+                live: true,       // act on asynchronously loaded content (default is true)
+                callback: function (box) {
+                    // the callback is fired every time an animation is started
+                    // the argument that is passed in is the DOM node being animated
+                },
+                scrollContainer: null,    // optional scroll container selector, otherwise use window,
+                resetAnimation: true,     // reset animation on end (default is true)
+            }
+        );
+        wow.init();
+    </script>
+</body>
+
+</html>
